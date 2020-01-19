@@ -11,11 +11,7 @@ class PrivateChat extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark().copyWith(
-        textTheme: TextTheme(
-          body1: TextStyle(color: Colors.black54),
-        ),
-      ),
+
       //home: WelcomeScreen(), ---cannot use this if you are using initial route.
       initialRoute: WelcomeScreen.id,
       routes: {
