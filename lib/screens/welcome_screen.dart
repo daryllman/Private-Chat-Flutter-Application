@@ -1,3 +1,4 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:private_chat/screens/login_screen.dart';
 import 'package:private_chat/screens/registration_screen.dart';
@@ -23,7 +24,8 @@ class _WelcomeScreenState extends State<WelcomeScreen>
       //upperBound: 100.0,
     );
 
-    animation = ColorTween(begin: Colors.blueGrey, end: Colors.white).animate(controller);
+    animation = ColorTween(begin: Colors.blueGrey, end: Colors.white)
+        .animate(controller);
 
     controller.forward();
 
@@ -38,7 +40,6 @@ class _WelcomeScreenState extends State<WelcomeScreen>
     controller.dispose();
     super.dispose();
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -59,9 +60,9 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                     height: 60.0,
                   ),
                 ),
-                Text(
-                  'Private Chat',
-                  style: TextStyle(
+                TypewriterAnimatedTextKit(
+                  text: ['Private Chat'],
+                  textStyle: TextStyle(
                     fontSize: 45.0,
                     fontWeight: FontWeight.w900,
                   ),
